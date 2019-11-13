@@ -1,0 +1,14 @@
+{
+    "name": "Lillie_bot",
+    "version": "0.1.0",
+    "description": "Bot para o discord feito por uma pessoa meio random. Criado para fazer o que o criador quer que faça.",
+    "main": "Lillie.js",
+    "author": "Nightglow",
+    "dependencies": {
+        "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "discord.js": "^11.5.1",
+        "nodemon": "^1.19.4",
+        "pokedex-promise-v2": "^3.2.0",
+        "winston": "^3.2.1"
+    }
+}
