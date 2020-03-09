@@ -8,7 +8,7 @@ const fs = require('fs');
 var path = require("path");
 
 client.on('ready', function(evt) {
-    //client.users.get('439187903126700045').send(`Acabo de logar como ${client.user.tag}!`);
+    client.users.get('439187903126700045').send(`Acabo de logar como ${client.user.tag}!`);
 });
 
 client.on('message', async function(message) {
@@ -87,6 +87,16 @@ client.on('message', async function(message) {
                     } else {
                         message.channel.send('Por favor preencha as informações corretamente. (!calcular {numero} {número da base do primeiro numero} {operação (+, -, *, /)} {segundo numero} {número da base do segundo numero} {número da base da resposta})');
                     }
+                }
+                break;
+                break;
+            case 'pokemonExp':
+                if (args.length < 3) {
+                    message.channel.send('Por favor informe o level do pokemon');
+                } else {
+                    PokeFunction.pokemonExp(args[1], args[2]).then(function(data) {
+                        message.channel.send({ embed: data });
+                    });
                 }
                 break;
         }
